@@ -1,0 +1,17 @@
+{
+  "name": "try-build-something-by-webpack",
+  "version": "1.0.0",
+  "description": "Try to try",
+  "main": "index.js",
+  "repository": "git@github.com:ImKK000/try-build-something-by-webpack.git",
+  "author": {
+    "name": "Nattakit Boonyang",
+    "email": "nattakit.boonyang@gmail.com"
+  },
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "ts-loader": "^4.1.0",
+    "typescript": "^2.7.2"
+  }
+}
