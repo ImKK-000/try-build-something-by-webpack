@@ -1,1 +1,2 @@
-console.log('hello world');
+let loaderText: string = 'Hello Console';
+console.log(loaderText);
