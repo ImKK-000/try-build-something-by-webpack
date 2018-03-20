@@ -1,3 +1,6 @@
+$primary-color: #ff0;
+$secondary-color: #00f;
+
 * {
   font-family: sans-serif, Verdana, Arial, Helvetica;
   transform-origin: 0px 0px 0px;
@@ -6,4 +9,12 @@
 html,
 body {
   margin: 0 auto;
+}
+
+h1 {
+  color: $primary-color;
+}
+
+p {
+  color: $secondary-color;
 }
