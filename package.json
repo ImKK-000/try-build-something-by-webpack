@@ -10,8 +10,20 @@
   },
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "exec": "PATH=$PATH:./node_modules/.bin",
+    "clean": "yarn run exec && rimraf dist",
+    "build": "yarn run exec && webpack --config webpack.config.js --mode=development"
+  },
   "devDependencies": {
+    "css-loader": "^0.28.11",
+    "node-sass": "^4.7.2",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
     "ts-loader": "^4.1.0",
-    "typescript": "^2.7.2"
+    "typescript": "^2.7.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
   }
 }
