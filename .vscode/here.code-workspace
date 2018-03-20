@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "Try to build something :)",
+			"path": "../"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"node_modules": true,
+			"dist": true,
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true
+		}
+	}
+}
