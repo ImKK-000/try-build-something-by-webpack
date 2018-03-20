@@ -11,10 +11,8 @@ body {
   margin: 0 auto;
 }
 
-h1 {
-  color: $primary-color;
-}
-
 p {
-  color: $secondary-color;
+  span {
+    color: #999;
+  }
 }

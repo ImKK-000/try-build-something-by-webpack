@@ -1,4 +1,8 @@
 const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CheckerPlugin } = require('awesome-typescript-loader');
 const __srcdir = path.join(__dirname, 'src');
 
 module.exports = {
@@ -7,15 +11,15 @@ module.exports = {
     path.join(__srcdir, 'scss', 'main.scss')
   ],
   output: {
+    filename: '[name].bundle.js',
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
     publicPath: 'assets'
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader',
+        loader: 'awesome-typescript-loader',
         exclude: /node_modules/
       },
       {
@@ -43,6 +47,26 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.scss']
   },
+  devServer: {
+    contentBase: [
+      path.join(__dirname, 'dist')
+    ],
+    hot: true,
+    historyApiFallback: true,
+    port: 8888
+  },
   devtool: 'source-map',
-  plugins: []
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html'
+    }),
+    new CleanWebpackPlugin('dist'),
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new CheckerPlugin(),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    })
+  ]
 };

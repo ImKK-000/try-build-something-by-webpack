@@ -1,12 +1,23 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
     "allowJs": true,
-    "alwaysStrict": true,
-    "esModuleInterop": true,
     "module": "es6",
-    "outDir": "./dist/",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "preserveConstEnums": true,
+    "rootDir": "src",
+    "sourceMap": true,
     "strict": true,
-    "target": "es5",
-    "sourceMap": true
-  }
+    "target": "es5"
+  },
+  "exclude": [
+    "dist",
+    "node_modules"
+  ],
+  "include": [
+    "**/*.ts"
+  ]
 }
