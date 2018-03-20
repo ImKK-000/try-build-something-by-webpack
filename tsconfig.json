@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "alwaysStrict": true,
+    "checkJs": true,
+    "esModuleInterop": true,
+    "module": "es6",
+    "outDir": "./dist/",
+    "strict": true,
+    "target": "es5",
+    "sourceMap": true
+  }
+}
